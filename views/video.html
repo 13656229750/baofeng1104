@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>暴风VIP会员,暴风商城,暴风影音</title>
+
+    <link href="css/index.css" rel="stylesheet">
+    <link href="css/public.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/layer.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/layer.js"></script>
+</head>
+
+<body style="background: #fff">
+    <div class="v_top">
+        <div class="newhead-main">
+            <a href="index.html" class="logo"></a>
+            <div class="newhead-small-nav">
+                <a href="index.html" target="_blank">首页</a>
+                <a href="" target="_blank" class="menu-guide">导航</a>
+            </div>
+
+            <div class="search-main">
+                <div class="search clearfix"> <span class="bar-shadow"></span>
+                    <form>
+                        <input type="text" class="search-bar" autocomplete="off" maxlength="30">
+                        <input type="submit" class="search-btn" value="搜片">
+                    </form>
+                </div>
+            </div>
+
+            <div class="newhead-right">
+                <div class="login-con">
+                    <div class="js-login-d">
+                        <span class="login-register">
+                                    <a href="" class="login-icon"></a>
+                                    <a onclick="login()"  class="login" style="cursor: pointer">登录</a>
+                                    /
+                                    <a onclick="reg()" style="cursor: pointer" class="register">注册</a>
+                                </span>
+                    </div>
+                </div>
+                <a href="" class="tit download" target="_blank" title="客户端">客户端</a>
+                <a class="tit collection" href="">收藏</a>
+                <a class="tit viewed" href="">看过</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 播放 -->
+    <div class="play-box">
+        <div class="main">
+            <div class="title clearfix">
+                <h2>  <%=tname %></h2>
+                <p>
+                    <a href="" target="_blank" title="电影">电影</a><em>&gt;</em>
+                    <a href="" target="_blank" title="内地">内地</a><em>&gt;</em>
+                    <a href="" target="_blank" title="动作">动作</a><em>&gt;</em>  <%=tname %>
+                </p>
+            </div>
+
+            <div class="play">
+                <div class="left">
+                    <embed width="100%" height="100%" flashvars="" allowscriptaccess="always" wmode="opaque" allowfullscreen="true" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="High" src="http://static.hd.baofeng.com/swf/player/loader.swf?ver=1566212267"
+                        id="playj36ar2">
+                </div>
+
+                <div class="right">
+                    <div class="menu">
+                        <div class="jieshao">
+                            <div class="img">
+                                <img src="img/51_270-360.jpg" width="96" height="128" alt="">
+                                <i class="icon"></i></div>
+                            <div class="info">
+                                <p class="name"><em class="score">8.9</em>叶问外传:张天志</p>
+                                <p class="text">正义中的胜负抗衡</p>
+                            </div>
+
+                            <p class="buy-five">
+                                <a href="" target="_blank" title="5元">5元</a>买单片
+                            </p>
+
+                        </div>
+
+                        <div class="pay-style">
+                            <a href="" target="_blank" d title="开通暴风VIP 免费看" class="vip-buybtn vip-paybtn">开通暴风VIP 免费看</a>
+
+                            <div class="vip-pay-code">
+                                <img src="img/paycode.jpg?t=20170405" width="100" height="100" alt="扫一扫，轻松开会员">
+                                <p>扫一扫，轻松开会员</p>
+                            </div>
+
+                        </div>
+
+                        <div class="play-scenes-list">
+                            <p class="current-num">精彩推荐：</p>
+                            <dl class="vip-recommend-list">
+                                <dd>
+                                    <div class="vip-recommend-img">
+                                        <a href=""><img src="http://box.bfimg.com/img/259/842759/52_128*96.jpg" width="104" height="78" alt="西虹市首富"><i class="vip-icon"></i></a>
+                                    </div>
+                                    <div class="vip-recommend-info">
+                                        <p class="vip-recommend-tit"><a href="">西虹市首富</a> </p>
+                                        <p class="vip-recommend-text"><a href="">有钱更烦恼的人生</a></p>
+                                    </div>
+                                </dd>
+
+                                <dd>
+                                    <div class="vip-recommend-img">
+                                        <a href=""><img src="http://box.bfimg.com/img/259/842759/52_128*96.jpg" width="104" height="78" alt="西虹市首富"><i class="vip-icon"></i></a>
+                                    </div>
+                                    <div class="vip-recommend-info">
+                                        <p class="vip-recommend-tit"><a href="">西虹市首富</a> </p>
+                                        <p class="vip-recommend-text"><a href="">有钱更烦恼的人生</a></p>
+                                    </div>
+                                </dd>
+
+                                <dd>
+                                    <div class="vip-recommend-img">
+                                        <a href=""><img src="http://box.bfimg.com/img/259/842759/52_128*96.jpg" width="104" height="78" alt="西虹市首富"><i class="vip-icon"></i></a>
+                                    </div>
+                                    <div class="vip-recommend-info">
+                                        <p class="vip-recommend-tit"><a href="">西虹市首富</a> </p>
+                                        <p class="vip-recommend-text"><a href="">有钱更烦恼的人生</a></p>
+                                    </div>
+                                </dd>
+
+                                <dd>
+                                    <div class="vip-recommend-img">
+                                        <a href=""><img src="http://box.bfimg.com/img/259/842759/52_128*96.jpg" width="104" height="78" alt="西虹市首富"><i class="vip-icon"></i></a>
+                                    </div>
+                                    <div class="vip-recommend-info">
+                                        <p class="vip-recommend-tit"><a href="">西虹市首富</a> </p>
+                                        <p class="vip-recommend-text"><a href="">有钱更烦恼的人生</a></p>
+                                    </div>
+                                </dd>
+                                <dd>
+                                    <div class="vip-recommend-img">
+                                        <a href=""><img src="http://box.bfimg.com/img/259/842759/52_128*96.jpg" width="104" height="78" alt="西虹市首富"><i class="vip-icon"></i></a>
+                                    </div>
+                                    <div class="vip-recommend-info">
+                                        <p class="vip-recommend-tit"><a href="">西虹市首富</a> </p>
+                                        <p class="vip-recommend-text"><a href="">有钱更烦恼的人生</a></p>
+                                    </div>
+                                </dd>
+
+                                <dd>
+                                    <div class="vip-recommend-img">
+                                        <a href=""><img src="http://box.bfimg.com/img/259/842759/52_128*96.jpg" width="104" height="78" alt="西虹市首富"><i class="vip-icon"></i></a>
+                                    </div>
+                                    <div class="vip-recommend-info">
+                                        <p class="vip-recommend-tit"><a href="">西虹市首富</a> </p>
+                                        <p class="vip-recommend-text"><a href="">有钱更烦恼的人生</a></p>
+                                    </div>
+                                </dd>
+
+                                <dd>
+                                    <div class="vip-recommend-img">
+                                        <a href=""><img src="http://box.bfimg.com/img/259/842759/52_128*96.jpg" width="104" height="78" alt="西虹市首富"><i class="vip-icon"></i></a>
+                                    </div>
+                                    <div class="vip-recommend-info">
+                                        <p class="vip-recommend-tit"><a href="">西虹市首富</a> </p>
+                                        <p class="vip-recommend-text"><a href="">有钱更烦恼的人生</a></p>
+                                    </div>
+                                </dd>
+
+                            </dl>
+
+                            <a href="" target="_blank" title="暴风影音客户端下载" class="play-download">暴风影音客户端下载</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="play_main">
+        <div class="left">
+            <div class="title">
+                <p class="module-tit">猜你喜欢</p>
+            </div>
+
+            <ul class="cnxh_list" id="cnxh">
+         <% for(let i=0;i<gueArr.length;i++){%>
+                 <li>
+                    <a class="poster-src" href="" target="_blank" title="摔跤吧!爸爸">
+                        <img src="<%=gueArr[i].img%>" width="180" height="240" alt="摔跤吧!爸爸">
+                        <span class="hot-pic-shadow"></span>
+                        <p class="hot-pic-fv">
+                            <a class="fv-add-no" href="" title="收藏"></a>
+                        </p>
+                        <p class="hot-pic-text"><a href="" title="大码头" target="_blank"><%=gueArr[i].total%></a></p>
+                    </a>
+
+                    <div class="hot-text">
+                        <p class="hot-pic-tit clearfix">
+                            <span class="score"><%=gueArr[i].score%></span>
+                            <a href="" target="_blank" class="hot-pic-name" title="摔跤吧!爸爸"><%=gueArr[i].title%></a>
+                        </p>
+                        <p class="hot-pic-tip"><%=gueArr[i].details%></p>
+                    </div>
+                </li>
+       <%}%>
+
+
+            </ul>
+
+            <div class="news-movie-box">
+                <div class="mov_left">
+                    <div class="title">
+                        <p class="module-tit">热门推荐</p>
+                        <a href="" target="_blank" title="更多" class="module-tit-more">更多&gt;&gt;</a>
+                    </div>
+
+                    <ul id="tuijian">
+              <% for(let i=0;i<hotrecArr.length;i++){%>
+                        <li>
+                            <div class="news-list-picbox">
+                                <p class="news-list-pic">
+                                    <a href="" target="_blank" title="开封府">
+                                        <img src="<%=hotrecArr[i].img%>" width="180" height="135" alt="开封府">
+                                        <span class="news-list-shadow"></span>
+                                    </a>
+                                </p>
+                                <p class="news-list-title">
+                                    <a href="" target="_blank" title="开封府"><%=hotrecArr[i].title%></a>
+                                </p>
+                            </div>
+                        </li>
+              <%}%> 
+                    </ul>
+                </div>
+
+                <div class="mov_right">
+                    <div class="title">
+                        <p class="module-tit">电影榜</p>
+                        <a href="" target="_blank" title="更多" class="module-tit-more">更多&gt;&gt;</a>
+                    </div>
+                    <dl class="play-movie-list" id="play-movie-list">
+                        <div class="line">
+                            <dt class="js-rl-text" style="display: none"> 
+                                <span class="score" data-index="0">2</span> 
+                                <em class="icon-num" data-index="0">1</em> 
+                                <a class="hot-movie-tit" href="" target="_blank" title="一辈子的姐弟">一辈子的姐弟</a> 
+                            </dt>
+                            <dd class="js-rl-pic" style="display: block">
+                                <div class="hot-movie-details">
+                                    <p class="hot-movie-pic">
+                                        <a href="" target="_blank" title="一辈子的姐弟">
+                                            <img src="img/52_200-150.jpg" width="180" height="135" alt="一辈子的姐弟">
+                                            <span class="hot-movie-num">1</span>
+                                            <span class="movie-text-shadow"></span>
+                                        </a>
+                                    </p>
+                                    <p class="hot-pic-text">
+                                        <a href="" title="一辈子的姐弟" target="_blank">一辈子的姐弟</a>
+                                    </p>
+                                </div>
+                            </dd>
+                        </div>
+
+                        <div class="line">
+                            <dt class="js-rl-text"> 
+                                    <span class="score" data-index="0">4.4</span> 
+                                    <em class="icon-num" data-index="0">2</em> 
+                                    <a class="hot-movie-tit" href="" target="_blank" title="龙族少年">龙族少年</a> 
+                                </dt>
+                            <dd class="js-rl-pic">
+                                <div class="hot-movie-details">
+                                    <p class="hot-movie-pic">
+                                        <a href="" target="_blank" title="龙族少年">
+                                            <img src="img/52_200-151.jpg" width="180" height="135" alt="龙族少年">
+                                            <span class="hot-movie-num">2</span>
+                                            <span class="movie-text-shadow"></span>
+                                        </a>
+                                    </p>
+                                    <p class="hot-pic-text">
+                                        <a href="" title="龙族少年" target="_blank">龙族少年</a>
+                                    </p>
+                                </div>
+                            </dd>
+                        </div>
+
+                        <div class="line">
+                            <dt class="js-rl-text"> 
+                                        <span class="score" data-index="0">8</span> 
+                                        <em class="icon-num" data-index="0">3</em> 
+                                        <a class="hot-movie-tit" href="" target="_blank" title="怒火警探">怒火警探</a> 
+                                    </dt>
+                            <dd class="js-rl-pic">
+                                <div class="hot-movie-details">
+                                    <p class="hot-movie-pic">
+                                        <a href="" target="_blank" title="怒火警探">
+                                            <img src="img/52_200-153.jpg" width="180" height="135" alt="怒火警探">
+                                            <span class="hot-movie-num">3</span>
+                                            <span class="movie-text-shadow"></span>
+                                        </a>
+                                    </p>
+                                    <p class="hot-pic-text">
+                                        <a href="" title="怒火警探" target="_blank">怒火警探</a>
+                                    </p>
+                                </div>
+                            </dd>
+                        </div>
+
+                        <div class="line">
+                            <dt class="js-rl-text"> 
+                                            <span class="score" data-index="0">5.2</span> 
+                                            <em class="icon-num" data-index="0">4</em> 
+                                            <a class="hot-movie-tit" href="" target="_blank" title="盲魇">盲魇</a> 
+                                        </dt>
+                            <dd class="js-rl-pic">
+                                <div class="hot-movie-details">
+                                    <p class="hot-movie-pic">
+                                        <a href="" target="_blank" title="盲魇">
+                                            <img src="img/5.jpg" width="180" height="135" alt="盲魇">
+                                            <span class="hot-movie-num">4</span>
+                                            <span class="movie-text-shadow"></span>
+                                        </a>
+                                    </p>
+                                    <p class="hot-pic-text">
+                                        <a href="" title="盲魇" target="_blank">盲魇</a>
+                                    </p>
+                                </div>
+                            </dd>
+                        </div>
+
+                        <div class="line">
+                            <dt class="js-rl-text"> 
+                                                <span class="score" data-index="0">5.2</span> 
+                                                <em class="icon-num" data-index="0">6</em> 
+                                                <a class="hot-movie-tit" href="" target="_blank" title="脑洞少女">脑洞少女</a> 
+                                            </dt>
+                            <dd class="js-rl-pic">
+                                <div class="hot-movie-details">
+                                    <p class="hot-movie-pic">
+                                        <a href="" target="_blank" title="脑洞少女">
+                                            <img src="img/6.jpg" width="180" height="135" alt="脑洞少女">
+                                            <span class="hot-movie-num">5</span>
+                                            <span class="movie-text-shadow"></span>
+                                        </a>
+                                    </p>
+                                    <p class="hot-pic-text">
+                                        <a href="" title="脑洞少女" target="_blank">脑洞少女</a>
+                                    </p>
+                                </div>
+                            </dd>
+                        </div>
+
+                        <div class="line">
+                            <dt class="js-rl-text"> 
+                                 <span class="score" data-index="0">5.8</span> 
+                                 <em class="icon-num" data-index="0">6</em> 
+                                 <a class="hot-movie-tit" href="" target="_blank" title="筑梦">筑梦</a> 
+                            </dt>
+                            <dd class="js-rl-pic">
+                                <div class="hot-movie-details">
+                                    <p class="hot-movie-pic">
+                                        <a href="" target="_blank" title="筑梦">
+                                            <img src="img/7.jpg" width="180" height="135" alt="筑梦">
+                                            <span class="hot-movie-num">6</span>
+                                            <span class="movie-text-shadow"></span>
+                                        </a>
+                                    </p>
+                                    <p class="hot-pic-text">
+                                        <a href="" title="筑梦" target="_blank">筑梦</a>
+                                    </p>
+                                </div>
+                            </dd>
+                        </div>
+
+                        <div class="line">
+                            <dt class="js-rl-text"> 
+                                 <span class="score" data-index="0">5.2</span> 
+                                 <em class="icon-num" data-index="0">7</em> 
+                                 <a class="hot-movie-tit" href="" target="_blank" title="庆祝改革开放40周年">庆祝改革开放40周年</a> 
+                            </dt>
+                            <dd class="js-rl-pic">
+                                <div class="hot-movie-details">
+                                    <p class="hot-movie-pic">
+                                        <a href="" target="_blank" title="庆祝改革开放40周年">
+                                            <img src="img/8.jpg" width="180" height="135" alt="庆祝改革开放40周年">
+                                            <span class="hot-movie-num">7</span>
+                                            <span class="movie-text-shadow"></span>
+                                        </a>
+                                    </p>
+                                    <p class="hot-pic-text">
+                                        <a href="" title="庆祝改革开放40周年" target="_blank">庆祝改革开放40周年</a>
+                                    </p>
+                                </div>
+                            </dd>
+                        </div>
+
+                        <div class="line">
+                            <dt class="js-rl-text"> 
+                                     <span class="score" data-index="0">8.6</span> 
+                                     <em class="icon-num" data-index="0">8</em> 
+                                     <a class="hot-movie-tit" href="" target="_blank" title="我的阿呆弟弟">我的阿呆弟弟</a> 
+                                </dt>
+                            <dd class="js-rl-pic">
+                                <div class="hot-movie-details">
+                                    <p class="hot-movie-pic">
+                                        <a href="" target="_blank" title="我的阿呆弟弟">
+                                            <img src="img/9.jpg" width="180" height="135" alt="我的阿呆弟弟">
+                                            <span class="hot-movie-num">8</span>
+                                            <span class="movie-text-shadow"></span>
+                                        </a>
+                                    </p>
+                                    <p class="hot-pic-text">
+                                        <a href="" title="我的阿呆弟弟" target="_blank">我的阿呆弟弟</a>
+                                    </p>
+                                </div>
+                            </dd>
+                        </div>
+                    </dl>
+
+
+
+
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 加载数据  -->
+
+        <script src='js/common.js'></script>
+        <script>
+            var cnxh = document.getElementById("cnxh")
+            var tuijian = document.getElementById("tuijian")
+
+            ajax("", "get", "data/data1.json", function(str) { //服务器启动
+                var num = JSON.parse(str);
+                for (var attr in num) {
+                    if (attr == "guess") {
+                        for (var i = 0; i < num[attr].length; i++) {
+                            var con = "<li><a class='poster-src' href='' target='_blank' title='摔跤吧!爸爸'><img src='" + num[attr][i].img + "' width='180' height='240' alt='摔跤吧!爸爸'> <span class = 'hot-pic-shadow' ></span> <p class ='hot-pic-fv'><a class = 'fv-add-no'href = ''title = '收藏'></a></p><p class='hot-pic-text'><a href='' title ='" + num[attr][i].title + "' target='_blank'>" + num[attr][i].total + "</a></p></a><div class='hot-text'><p class='hot-pic-tit clearfix'><span class='score'>" + num[attr][i].score + "</span><a href = '' target = '_blank' class = 'hot-pic-name' title = '" + num[attr][i].title + "' >" + num[attr][i].title + "</a> </p><p class = 'hot-pic-tip'>" + num[attr][i].details + " </p></div></li>"
+                            cnxh.innerHTML += con;
+                            console.log(num[attr][i])
+
+                        }
+                    }
+
+
+                    if (attr == "hot_recommend") {
+                        for (var i = 0; i < num[attr].length; i++) {
+                            var con2 = "<li><div class='news-list-picbox'><p class='news-list-pic'><a href='' target='_blank' title='" + num[attr][i].title + "'><img src='" + num[attr][i].img + "' width='180' height='135' alt='" + num[attr][i].title + "'><span class='news-list-shadow'></span></a></p><p class='news-list-title'><a href='' target='_blank' title='" + num[attr][i].title + "'>" + num[attr][i].title + "</a></p></div></li>"
+                            tuijian.innerHTML += con2;
+                            console.log(num[attr][i])
+
+                        }
+                    }
+                }
+            })
+
+
+            var movielist = document.getElementById("play-movie-list");
+            var line = movielist.getElementsByClassName("line")
+            var text = movielist.getElementsByClassName("js-rl-text")
+            var pic = movielist.getElementsByClassName("js-rl-pic")
+
+            for (var i = 0; i < line.length; i++) {
+                line[i].index = i;
+                line[i].onmouseover = function() {
+                    for (var j = 0; j < line.length; j++) {
+                        pic[j].style.display = "none"
+                        text[j].style.display = "block"
+                    }
+                    pic[this.index].style.display = "block"
+                    text[this.index].style.display = "none"
+                }
+            }
+        </script>
+
+
+
+
+
+        <div class="right">
+            <div class="play-tit-module">
+                <p class="module-tit">评论<em>（共8条）</em></p>
+                <span class="comments-words-tips">还可以输入
+                    <em>140</em>字
+                </span>
+            </div>
+
+            <div class="play-comments-area">
+                <textarea class="play-comments-input" title="输入框" id="shurukuang" placeholder="快来吐个槽吧！"></textarea>
+            </div>
+
+            <div class="play-submit-comments clearfix">
+                <div class="submit-comments-btn">
+                    <a style="cursor: pointer" class="submit-btn" areacode="comt" id="fbpl">发表评论</a>
+                </div>
+                <div class="submit-comments-vcode clearfix" style="display: block;">
+                    <input type="text" value="请输入验证码" class="vcode-input">
+                    <img src="http://comments.baofeng.com/v/?w=60&amp;h=25&amp;fontsize=18&amp;len=4&amp;leftpadding=10&amp;r=0.657721661526175" class="js-vcode-img vcode-img">
+                    <a href="" class="js-vcode-refresh">换一个</a>
+                </div>
+
+                <div class="binding-phone">评论需绑定手机号<a href="" target="_blank">立即绑定手机</a></div>
+            </div>
+
+            <script>
+                var fbpl = document.getElementById("fbpl");
+                var shurukuang = document.getElementById("shurukuang");
+                var comments1 = document.getElementById("comments1");
+                var comments2 = document.getElementById("comments2");
+
+
+                fbpl.onclick = function() {
+                    console.log(shurukuang.innerHTML)
+                    comments1.innerHTML += "<li><div class='comments-user-info'><div class='users-head'><a href=''><img src='img/100_60_60.jpg'></a></div><div class='user-info'><p class='users-name'>1576_9291_4</p><p class='comments-time'>2019-02-09 18:33</p></div></div><p class='users-comments'>" + shurukuang.value + "</p><div class='comments-line'><span class='comments-support'><a class='icon-support' href='javascript:void(0);' title='点赞'></a><em class='js-up-useful comments-support-num'>9</em></span><a href='' title='举报' class='play-comments-report'>举报</a></div></li>"
+                    comments2.innerHTML += "<li><div class='comments-user-info'><div class='users-head'><a href=''><img src='img/100_60_60.jpg'></a></div><div class='user-info'><p class='users-name'>1576_9291_4</p><p class='comments-time'>2019-02-09 18:33</p></div></div><p class='users-comments'>" + shurukuang.value + "</p><div class='comments-line'><span class='comments-support'><a class='icon-support' href='javascript:void(0);' title='点赞'></a><em class='js-up-useful comments-support-num'>9</em></span><a href='' title='举报' class='play-comments-report'>举报</a></div></li>"
+
+
+                }
+            </script>
+
+
+
+            <div class="play-comments-sort">
+                <div class="comments-sort-main">
+                    <a style="cursor: pointer" class="cur" id="pl_menu">按热度</a>
+                    <a style="cursor: pointer" class="" id="pl_menu2">按最新</a>
+                </div>
+            </div>
+
+            <div class="play-comments-con">
+                <ul id="comments1">
+                    <li>
+                        <div class="comments-user-info">
+                            <div class="users-head">
+                                <a href="">
+                                    <img src="img/100_60_60.jpg"></a>
+                            </div>
+                            <div class="user-info">
+                                <p class="users-name">1576_9291_4</p>
+                                <p class="comments-time">2019-02-09 18:33</p>
+                            </div>
+                        </div>
+                        <p class="users-comments">感觉就是傻逼</p>
+                        <div class="comments-line">
+                            <span class="comments-support">
+                                <a class="icon-support" href="javascript:void(0);" title="点赞"></a>
+                                <em class="js-up-useful comments-support-num">9</em>
+                            </span>
+                            <a href="" title="举报" class="play-comments-report">举报</a></div>
+                    </li>
+
+
+
+
+
+
+                </ul>
+
+                <ul id="comments2" style="display: none">
+                    <li>
+                        <div class="comments-user-info">
+                            <div class="users-head">
+                                <a href="">
+                                    <img src="img/100_60_60.jpg"></a>
+                            </div>
+                            <div class="user-info">
+                                <p class="users-name">1576_9291_4</p>
+                                <p class="comments-time">2019-02-09 18:33</p>
+                            </div>
+                        </div>
+                        <p class="users-comments">无语很难看真的无语</p>
+                        <div class="comments-line">
+                            <span class="comments-support">
+                                    <a class="icon-support" href="javascript:void(0);" title="点赞"></a>
+                                    <em class="js-up-useful comments-support-num">9</em>
+                                </span>
+                            <a href="" title="举报" class="play-comments-report">举报</a></div>
+                    </li>
+
+
+
+                </ul>
+
+            </div>
+
+            <div class="turn-page" id="paging" areacode="comtlist">
+                <div class="tur-page-fill">
+                    <input type="text" name="num" value="1" class="fill-num js_sum">
+                    <span>/<em class="js_total">2</em></span>
+                    <a href="" title="确定" class="confirm">确定</a>
+                </div>
+                <div class="turn-page-btn">
+                    <a href="" title="上一页" class="unclick">上一页</a>
+                    <a href="" title="下一页" class="js_next">下一页</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer">
+        <p class="links"></p>
+        <p><a href="" target="_blank">投资者关系</a>|<a href="" target="_blank">影音论坛导航</a>|
+            <a href="" target="_blank" rel="nofollow">加入暴风</a>|
+            <a href="" target="_blank" rel="nofollow">联系我们</a>|
+            <a href="" target="_blank">暴风无线产品</a>|
+            <a href="" target="_blank">暴风实验室</a>|
+            <a href="" target="_blank" rel="nofollow">更新历史</a>|
+            <a href="" target="_blank" rel="nofollow">关于我们</a>
+        </p>
+        <p>暴风集团股份有限公司 联系电话：010-62309066（工作日 9:30--21:30） </p>
+        <p>
+            <a href="" target="_blank" rel="nofollow">京ICP证070364号</a>
+            <a target="_blank" href="" rel="nofollow">京网文【2014】0921-221号</a>
+            <a target="_blank" href="" rel="nofollow">互联网药品信息服务资格证书（京）-非经营性-2018-0219</a>
+            <a target="_blank" href="" rel="nofollow">广播电视节目制作经营许可证：(京)字第01166号</a>
+            <br>
+            <a target="_blank" href="" style="display:inline-block;height:20px;line-height:20px;">
+                <img src="http://static.hd.baofeng.com/images/police.png" style="float:left;">京公网安备 11010802020226号</a>
+            <a target="_blank" href="" rel="nofollow">京ICP备08011423号</a>
+            <a target="_blank" href="" rel="nofollow">信息网络传播视听许可证号：0108298</a>
+            <a target="_blank" href="" rel="nofollow">营业性演出许可证</a>
+            <a href="" target="_blank" rel="nofollow">网络出版服务许可证</a>
+            <a href="" target="_blank" rel="nofollow">营业执照</a>
+        </p>
+        <p>
+            <a href="" target="_blank" rel="nofollow">海淀警方预防电信诈骗宣传</a>
+            <a href="" target="_blank" rel="nofollow">首都网络安全日</a>
+        </p>
+        <p>
+            <a href="" target="_blank" rel="nofollow" style="display:inline-block;height:20px;line-height:20px;">
+                <img src="http://static.hd.baofeng.com/images/jubao.jpg?t=20170828" style="float:left; margin-right:3px;">中国互联网举报中心</a> <a href="http://www.12377.cn/node_548446.htm" target="_blank" rel="nofollow">网络举报APP下载</a>
+            <a href="" target="_blank" rel="nofollow">网上有害信息举报专区</a>
+            <a href="" target="_blank" rel="nofollow">网上暴恐有害信息举报</a>
+        </p>
+        <p>
+            <span>违法和不良信息举报电话：010-62309066-8019 </span>
+            <a href="" target="_blank" rel="nofollow">举报邮箱：baofengjubao@baofeng.com</a>]</p>
+
+    </div>
+
+    <script>
+        var pl_menu = document.getElementById("pl_menu")
+        var pl_menu2 = document.getElementById("pl_menu2")
+        var comments1 = document.getElementById("comments1")
+        var comments2 = document.getElementById("comments2")
+
+        pl_menu.onmouseover = function() {
+            comments1.style.display = "block"
+            comments2.style.display = "none"
+            pl_menu.className = "cur"
+            pl_menu2.className = ""
+        }
+
+        pl_menu2.onmouseover = function() {
+            comments2.style.display = "block"
+            comments1.style.display = "none"
+            pl_menu2.className = "cur"
+            pl_menu.className = ""
+        }
+    </script>
+</body>
+
+</html>

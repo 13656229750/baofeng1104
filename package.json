@@ -1,0 +1,23 @@
+{
+  "name": "baofeng1104",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.4",
+    "cookie-session": "^1.3.3",
+    "crypto": "^1.0.1",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "formidable": "^1.2.1",
+    "mongoose": "^5.7.7",
+    "svg-captcha": "^1.4.0",
+    "uuid": "^3.3.3"
+  }
+}

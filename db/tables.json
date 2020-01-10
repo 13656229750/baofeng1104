@@ -1,0 +1,55 @@
+{
+    "recmovie": {
+        "img": "String",
+        "vip": "String",
+        "definition": "String",
+        "title": "String",
+        "detail": "String",
+        "score": "String"
+    },
+    "hotmovie": {
+        "img": "String",
+        "vip": "String",
+        "definition": "String",
+        "title": "String",
+        "detail": "String",
+        "score": "String"
+    },
+    "banner":{
+        "big_img": "String",
+        "small_img": "String"
+    },
+    "user": {
+        "usr": "String",
+        "pas": "String",
+        "email": "String"
+    },
+    "gu":{
+        "img": "String",
+        "title": "String",
+        "details": "String",
+        "score": "String",
+        "total": "String"
+    },
+    "upmovie":{
+        "img": "String",
+        "vip": "String",
+        "definition": "String",
+        "title": "String",
+        "detail": "String",
+        "score": "String"
+    },
+    "favmovie":{
+        "img": "String",
+        "vip": "String",
+        "definition": "String",
+        "title": "String",
+        "detail": "String",
+        "score": "String"
+    },
+    "hotrec":{
+        "img": "String",
+        "title": "String"    
+    }
+
+}

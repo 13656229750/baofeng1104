@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>无标题文档</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+    <div class="place">
+        <span>位置：</span>
+        <ul class="placeul">
+            <li><a href="#">推荐电影管理</a></li>
+            <li><a href="#">添加推荐电影</a></li>
+        </ul>
+    </div>
+
+    <div class="formbody">
+        <!-- 
+            注意：当表单中含有文件上传的表单项时，
+            则要把表单编码格式从默认的键值对
+            (application/x-www-form-urlencoded)改为流媒体格式
+            (multipart/form-data)
+          -->
+        <form enctype="multipart/form-data" action="/recmovieupdata" method="post">
+            <div class="formtitle"><span>基本信息</span></div>
+
+            <ul class="forminfo">
+                <li><label>电影名称</label>
+                    <input type="hidden" name="_id" value="<%=data[0]._id %>">
+                    <input value="<%=data[0].title%>" name="title" type="text" class="dfinput" /><i>名称不能超过30个字符</i></li>
+                <li><label>电影简介</label><input value="<%=data[0].detail%>" name="detail" type="text" class="dfinput" /><i>简介不能超过30个字符</i></li>
+                <li><label>VIP</label>
+
+                    <input <% if(data[0].vip=="VIP免费"){ %> checked <% } %> type="radio" name="vip" value="VIP免费">vip免费
+                    <input <% if(data[0].vip=="付费"){ %> checked <% } %> type="radio" name="vip" value="付费">付费</li>
+                <li><label>电影画质</label>
+
+                    <input <% if(data[0].definition=="标清"){ %> checked <% } %> type="radio" name="definition" value="标清">标清
+                    <input <% if(data[0].definition=="高清"){ %> checked <% } %> type="radio" name="definition" value="高清">高清
+                    <input <% if(data[0].definition=="超清"){ %> checked <% } %> type="radio" name="definition" value="超清">超清
+                </li>
+                <li>
+                        <img style="width: 150px; height: 150px;" src="<%=data[0].img %>">
+                </li>
+                <li><label>电影封面</label><input name="img" type="file" class="dfile" /><i>请选择文件</i></li>
+                <li><label>&nbsp;</label><input type="submit" class="btn" value="修改" /></li>
+            </ul>
+
+
+    </div>
+    </form>
+
+</body>
+
+</html>

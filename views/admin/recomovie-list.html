@@ -1,0 +1,156 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>无标题文档</title>
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="js/jquery.js"></script>
+
+  <script type="text/javascript">
+
+    //删除记录
+    function delet (curid){
+    
+      if (confirm('确定要删除吗')) {
+        $.get('/recmoviedel', {
+          "mid": curid
+        }, (d) => {
+          alert(d.msg);
+          if (d.flag) { //删除成功
+            location.href = '/recmovielist';
+          }
+        }, 'json');
+      }
+    }
+
+
+    $(document).ready(function () {
+      $(".click").click(function () {
+        $(".tip").fadeIn(200);
+      });
+
+      $(".tiptop a").click(function () {
+        $(".tip").fadeOut(200);
+      });
+
+      $(".sure").click(function () {
+        $(".tip").fadeOut(100);
+      });
+
+      $(".cancel").click(function () {
+        $(".tip").fadeOut(100);
+      });
+
+    });
+  </script>
+
+
+</head>
+
+
+<body>
+
+  <div class="place">
+    <span>位置：</span>
+    <ul class="placeul">
+      <li><a href="#">推荐电影管理</a></li>
+      <li><a href="#">推荐电影列表</a></li>
+    </ul>
+  </div>
+
+  <div class="rightinfo">
+
+    <div class="tools">
+      <ul class="toolbar">
+        <li class="click"><span><img src="images/t01.png" /></span>添加</li>
+        <li class="click"><span><img src="images/t02.png" /></span>修改</li>
+        <li><span><img src="images/t03.png" /></span>删除</li>
+      </ul>
+      <form action="/recmovielist" method="get">
+      <li>
+        <input name="title" type="text" value="请输入电影名称" onclick="this.value='';" class="dfinput"  />
+        &nbsp;<input type="submit" class="btn" value="搜索" />
+      </li>
+    </form>
+    </div>
+
+
+    <table class="tablelist">
+      <thead>
+        <tr>
+          <th><input name="" type="checkbox" value="" checked="checked" /></th>
+          <th>编号<i class="sort"><img src="images/px.gif" /></i></th>
+          <th>电影名称</th>
+          <th>电影封面</th>
+          <th>VIP</th>
+          <th>画质</th>
+          <th><a href="/recmovieadd">添加</a></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for(let i = 0;i< data.length;i++) { %>
+        <tr>
+          <td><input name="" type="checkbox" value="" /></td>
+          <td><%=i+1%></td>
+          <td><%=data[i].title %></td>
+          <td><img style="width: 150px;height: 150px;" src="<%=data[i].img %>"></td>
+          <td>
+            <%=data[i].vip %>
+          </td>
+          <td>
+            <%=data[i].definition %>
+          </td>
+          <td><a href="/recmovieupdata?mid=<%=data[i]._id%>" class="tablelink">修改</a>
+            <a href="javascript:delet('<%=data[i]._id %>')" class="tablelink"> 删除</a></td>
+        </tr>
+        <%}%>     
+        </tbody>
+    </table>
+       
+    <div class="pagin">
+    	<div class="message">共<i class="blue"><%=total %></i>条记录，当前显示第&nbsp;<i class="blue"><%=curp %>&nbsp;</i>页
+  </div>
+  <ul class="paginList">
+    <li class="paginItem"><a href="javascript:;"><span class="pagepre"></span></a></li>
+    <% for(let p = 1;p<=pageNum;p++) { %>
+
+    <li class="paginItem"><a href="/recmovielist?pid=<%=p %>&title=<%=titles%>"><%=p %></a></li>
+    <%}%>
+       
+        <li class="paginItem"><a href="javascript:;"><span class="pagenxt"></span></a></li>
+        </ul>
+    </div>
+    
+    
+    <div class="tip">
+    	<div class="tiptop"><span>提示信息</span><a></a></div>
+        
+      <div class="tipinfo">
+        <span><img src="images/ticon.png" /></span>
+        <div class="tipright">
+        <p>是否确认对信息的修改 ？</p>
+        <cite>如果是请点击确定按钮 ，否则请点取消。</cite>
+        </div>
+        </div>
+        
+        <div class="tipbtn">
+        <input name="" type="button"  class="sure" value="确定" />&nbsp;
+        <input name="" type="button"  class="cancel" value="取消" />
+        </div>
+    
+    </div>
+    
+    
+    
+    
+    </div>
+    
+    <script type="text/javascript">
+      $('.tablelist tbody tr:odd').addClass('odd');
+    </script>
+
+</body>
+
+</html>

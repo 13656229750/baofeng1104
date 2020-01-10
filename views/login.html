@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>暴风VIP会员,暴风商城,暴风影音</title>
+    <link href="css/index.css" rel="stylesheet">
+    <link href="css/login.css" rel="stylesheet">
+</head>
+
+
+
+<body>
+    <div class="floating-layer-div" id="login_div">
+        <span class="blank10"></span>
+        <div class="floating-layer-title">暴风账号登录</div>
+        <div class="floating-layer-content">
+            <div class="floating-layer-left">
+                <div class="floating-layer-user">
+                    <span class="floating-layer-user-error" id="tips"></span>
+                    <ul>
+                        <li style="position:relative;"><input type="text" placeholder="手机/邮箱/用户名" name="loginname" maxlength="100" id="loginname" tabindex="1" class="layer-texton"></li>
+                        <li style="position:relative;">
+                            <input type="password" maxlength="100" name="password" placeholder="密码" id="password" tabindex="2" class="layer-passwordon" value=""></li>
+
+                        <li class="layer-confirm"><a href="" target="_blank">找回密码</a><em><input type="checkbox" name="memberme"  id="memberme"  tabindex="4" checked  value="1">30天内自动登录</em></li>
+                        <li>
+                            <a type="button" id="submit" style="cursor: pointer" class="floating-layer-button">登 录</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="floating-layer-right">
+                <div class="floating-layer-right-else">
+                    <span>使用合作账号一键登录</span>
+                    <a href="" target="_blank" class="qq"><img src="img/qq1.png" border="0" />QQ登录</a>
+                    <a href="" target="_blank" class="weichat"><img src="img/weichat1.png" border="0" />微信登录</a>
+                    <a href="" target="_blank" class="sina"><img src="img/sina1.png" border="0" />微博登录</a>
+
+
+                </div>
+                <div class="floating-layer-prompt">还没暴风账号？<a href="">立即注册</a></div>
+                <div class="floating-layer-prompt" style="padding:20px 0 0 70px;width:89px;">
+                    <a title="点击查看帮助" style="color:#ccc;padding-left:20px;background:url(../public/image/help.png) no-repeat 0 50%" target="_blank" href="">遇到问题</a></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var submit = document.getElementById("submit");
+        var loginname = document.getElementById("loginname");
+        var password = document.getElementById("password");
+        var tips = document.getElementById("tips")
+        var reg = /\w/;
+        var reg2 = /^\d{6}$/
+        submit.onclick = function() {
+            if (reg.test(loginname.value) && reg2.test(password.value)) {
+                alert("登陆成功")
+            } else {
+                tips.innerHTML = "输入错误,请重新输入"
+            }
+        }
+    </script>
+
+</body>
+
+</html>
+
+</html>

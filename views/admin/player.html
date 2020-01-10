@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>云音乐播放器</title>
+	<script src="js/canvas.js"></script>
+	<style>
+		body{
+			margin:0;
+		}
+	</style>
+</head>
+<body>
+	<audio id="Player"></audio>
+	<!-- <input type="button" value="播放" id="P"> -->
+	<script>
+		// var Player = document.getElementById("Player");
+		// document.getElementById("P").onclick=function()
+		// {
+		// 	Player.play();
+		// }
+	</script>
+
+
+	<div id="QQPlayer"></div>
+	<script>
+		ges = [
+			{ming:"seeyou",src:"music/seeyou.mp3",shou:"邓紫琪",diePian:"images/seeyou.png"},
+			{ming:"笑红尘",src:"music/笑红尘.mp3",shou:"陈淑华",diePian:"images/xhc.png"}
+		];
+		dangQianGe = 0;
+		player = document.querySelector("audio");
+		player.src=ges[0]["src"];
+		mode = 1;
+		qieHuanMode=1;
+		init(50,"QQPlayer",500,780,main);
+		function main()
+		{
+			bg = new LSprite();	
+			bg.graphics.drawRect(1,"black",[0,0,500,780],true,"black");
+			addChild(bg);
+
+			bg.graphics.drawVertices(1,"gray",[[0,50],[],[]],true,"gray");
+			imgSource = [
+				{name:"d",path:"images/seeyou.png"},
+				{name:"p",path:"images/playbtn.png"},
+				{name:"np",path:"images/nextbtn.png"},
+				{name:"xh",path:"images/xunhuan.png"}
+			];
+			loading = new LoadingSample4();//创建加载条
+			bg.addChild(loading);//将加载条添加到背景
+			LLoadManage.load(
+				imgSource,
+				function(progess)
+				{
+					loading.setProgress(progess);
+				},
+				interface
+			);
+			function interface(result)
+			{
+				bg.removeChild(loading);
+				loadding=null;
+				imgs = result;
+				die = new LBitmap(new LBitmapData(imgs["d"]));//取得一张资源图片---x,y,width,height，代表可视的范围，不用可去掉。
+				dieCeng = new LSprite();
+				bg.addChild(dieCeng);
+				dieCeng.addChild(die);
+				die.x = (500-die.getWidth())/2;
+				die.y = 130;
+
+				playC = new LSprite();
+				playBtn = new LBitmap(new LBitmapData(imgs["p"],0,0,73,73));
+				playC.addChild(playBtn);
+				bg.addChild(playC);
+				playBtn.x = (500-playBtn.getWidth())/2;
+				playBtn.y = 650;
+
+				playC.addEventListener(LMouseEvent.MOUSE_DOWN,mplay);
+				function mplay(e)
+				{
+					if(player.paused==true)
+					{
+						player.play();
+						playBtn.bitmapData.setCoordinate(73,0);
+						bg.addEventListener(LEvent.ENTER_FRAME,dong);
+						
+					}
+					else
+					{
+						player.pause();
+						playBtn.bitmapData.setCoordinate(0,0);
+						bg.removeEventListener(LEvent.ENTER_FRAME,dong);
+					}
+				}
+
+				prevC = new LSprite();
+				prevBtn = new LBitmap(new LBitmapData(imgs["np"],0,0,43,43));
+				prevC.addChild(prevBtn);
+				bg.addChild(prevC);
+
+				prevBtn.x = 70;
+				prevBtn.y = 665;
+
+				nextC = new LSprite();
+				nextBtn = new LBitmap(new LBitmapData(imgs["np"],43,0,43,43));
+				nextC.addChild(nextBtn);
+				bg.addChild(nextC);
+				nextBtn.x = 387;
+				nextBtn.y = 665;
+
+				nextC.addEventListener(LMouseEvent.MOUSE_DOWN,xyq)
+				function xyq()
+				{
+
+					if(!player.paused)
+					{
+						
+						if(qieHuanMode==1)
+						{
+							if(dangQianGe<ges.length-1)
+							{
+								dangQianGe++;
+								console.log(1);
+							}
+							else
+							{
+								dangQianGe=0;
+								console.log(2);
+							}
+						}
+						else if(qieHuanMode==2)
+						{
+							dangQianGe
+						}
+						else if(qieHuanMode==3)
+						{
+							dangQianGe = Math.round(Math.random()*(ges.length-1));
+							
+						}
+						qieHuanGe(dangQianGe);
+					}
+
+					
+				}
+
+				prevC.addEventListener(LMouseEvent.MOUSE_DOWN,syq)
+				function syq()
+				{
+					if(!player.paused)
+					{
+						if(qieHuanMode==1)
+						{
+							if(dangQianGe>0)
+							{
+								dangQianGe--;
+							}
+							else
+							{
+								dangQianGe=ges.length-1;
+							}
+						}
+						else if(qieHuanMode==2)
+						{
+							dangQianGe;
+						}
+						else if(qieHuanMode==3)
+						{
+							dangQianGe = Math.round(Math.random()*(ges.length-1));
+							console.log(dangQianGe);
+							
+						}
+						qieHuanGe(dangQianGe);
+					}
+					
+				}
+
+				xunHuanC = new LSprite();
+				xunHuanBtn = new LBitmap(new LBitmapData(imgs["xh"],0,0,39,33));
+				xunHuanC.addChild(xunHuanBtn);
+				bg.addChild(xunHuanC);
+				xunHuanBtn.x = 10;
+				xunHuanBtn.y = 670;
+
+				xunHuanC.addEventListener(LMouseEvent.MOUSE_DOWN,xh);
+				function xh(e)
+				{
+					mode++;
+					if(mode==1)
+					{
+						xunHuanBtn.bitmapData.setCoordinate(0,0);
+						qieHuanMode=mode;
+					}
+					else if(mode==2)
+					{
+						xunHuanBtn.bitmapData.setCoordinate(39,0);
+						qieHuanMode=mode;
+					}
+					else
+					{
+						xunHuanBtn.bitmapData.setCoordinate(78,0);
+						qieHuanMode=mode;
+						console.log(qieHuanMode);
+						mode=0;
+					}
+
+					
+
+				}
+
+				bg.graphics.drawRect(1,"gray",[50,600,400,3],true,"gray");
+
+				qiuC = new LSprite();
+				qiuC.graphics.drawArc(1,"green",[50,600,10,0,Math.PI*2],true,"green");
+				bg.addChild(qiuC);
+
+
+				qiuC.addEventListener(LMouseEvent.MOUSE_DOWN,jdown);
+			function jdown(e)
+			{
+				
+
+
+				cX = e.selfX;
+				bl = player.duration/400;
+				qiuC.addEventListener(LMouseEvent.MOUSE_MOVE,jmove);
+				if(!player.paused)
+				{
+					bg.removeEventListener(LEvent.ENTER_FRAME,dong);
+					player.pause();
+				}
+				// qiuC.addEventListener(LMouseEvent.MOUSE_OUT,jout);
+				
+			}
+			qiuC.addEventListener(LMouseEvent.MOUSE_UP,jup);
+			function jup(e)
+			{
+				qiuC.removeEventListener(LMouseEvent.MOUSE_MOVE,jmove);
+				player.currentTime=bl*qiuC.x;
+				bg.addEventListener(LEvent.ENTER_FRAME,dong);
+				player.play();
+			}
+			
+			function jmove(e)
+			{
+				
+				qiuC.x = e.offsetX - cX;
+			}
+
+
+
+				geMing = new LTextField();
+				geMing.text = "see you again";
+				geMing.color = "white";
+				geMing.size = 35;
+				bg.addChild(geMing);
+				geMing.x = (500-geMing.getWidth())/2;
+				geMing.y = 20;
+
+				geShou = new LTextField();
+				geShou.text = "歌手名";
+				geShou.color = "white";
+				geShou.size = 25;
+				bg.addChild(geShou);
+				geShou.x = (500-geShou.getWidth())/2;
+				geShou.y = 60;
+			}
+			function dong(e)
+			{
+				die.rotate = die.rotate+1;
+				qiuC.x = (400/player.duration)*player.currentTime;
+
+				if(player.ended==true)
+				{
+					if(qieHuanMode==1)
+					{
+						if(dangQianGe<ges.length-1)
+						{
+							dangQianGe++;
+							console.log(1);
+						}
+						else
+						{
+							dangQianGe=0;
+						}
+					}
+					else if(qieHuanMode==2)
+					{
+						dangQianGe;
+					}
+					else
+					{
+						dangQianGe = Math.round(Math.random()*(ges.length-1));
+					}
+					qieHuanGe(dangQianGe);
+
+				}
+			}
+
+			function qieHuanGe(diJiShou)
+			{
+				player.src=ges[diJiShou]["src"];
+				geMing.text=ges[diJiShou]["ming"];
+				geMing.x = (500-geMing.getWidth())/2;
+				geShou.text=ges[diJiShou]["shou"];
+				geShou.x = (500-geShou.getWidth())/2;
+				player.play();
+				changeImg(ges[diJiShou]["diePian"],die);
+			}
+		}
+		
+	</script>
+</body>
+</html>

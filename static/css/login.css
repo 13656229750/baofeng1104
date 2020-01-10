@@ -1,0 +1,417 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #0a2e53;
+    font-family: "微软雅黑";
+    font-size: 12px;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+input {
+    vertical-align: middle;
+}
+
+
+/* images call */
+
+.floating-layer-title,
+.floating-layer-user ul li input.layer-texton,
+.floating-layer-user ul li input.layer-passwordon,
+.floating-layer-user ul li .floating-layer-in-a .obtain-code {
+    background-image: url(../img/lay.png);
+    background-repeat: no-repeat;
+}
+
+
+/*浮层登录注册*/
+
+.floating-layer-div {
+    width: 543px;
+    height: 336px;
+    background-color: #ffffff;
+    margin: 0px;
+    position: relative;
+}
+
+.floating-layer-title {
+    width: 485px;
+    height: 32px;
+    line-height: 32px;
+    margin: 10px 29px 0;
+    background-position: 0 0;
+    text-indent: -9999px;
+    _padding-left: 485px;
+    _width: 0;
+    overflow: hidden;
+}
+
+.close-button {
+    z-index: 9999;
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    width: 15px;
+    line-height: 15px;
+    height: 15px;
+    overflow: hidden;
+    text-align: center;
+    font-family: "宋体";
+    color: #989898;
+    font-size: 18px;
+    text-indent: 0;
+    text-decoration: none;
+}
+
+.close-button:hover {
+    color: #1a9eff;
+}
+
+.blank10 {
+    height: 10px;
+    clear: both;
+    font-size: 0px;
+    display: block;
+}
+
+.floating-layer-content {
+    width: 485px;
+    height: 254px;
+    padding: 0 29px 30px;
+}
+
+.floating-layer-left {
+    width: 314px;
+    float: left;
+    height: 254px;
+}
+
+.floating-layer-right {
+    float: left;
+    width: 170px;
+    height: 230px;
+    margin-top: 24px;
+    border-left: 1px dashed #ddd;
+}
+
+.floating-layer-user {
+    width: 284px;
+    margin: 0;
+}
+
+.floating-layer-user-error {
+    color: #f00;
+    font-size: 12px;
+    height: 20px;
+    line-height: 20px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.floating-layer-user ul {
+    padding: 0;
+    margin: 0px;
+    list-style-type: none;
+}
+
+.floating-layer-user ul li {
+    height: 42px;
+    overflow: hidden;
+}
+
+.floating-layer-user ul li input {
+    height: 30px;
+    line-height: 30px;
+    _line-height: 32px;
+    border: 1px solid #dddddd;
+    font-size: 12px;
+    background-color: #fff!important;
+    color: #333;
+    outline: none;
+}
+
+.floating-layer-user ul li .grey {
+    color: #c9c9c9!important;
+}
+
+.floating-layer-code {
+    width: 140px;
+    text-indent: 5px;
+}
+
+.floating-layer-in-a {
+    float: right;
+    width: 122px;
+    height: 32px;
+}
+
+.floating-layer-in-a a {
+    display: block;
+    float: right;
+    width: 38px;
+    height: 20px;
+    margin: 5px 0;
+    line-height: 20px;
+    color: #999;
+    text-decoration: none;
+}
+
+.floating-layer-in-a a:hover {
+    color: #1a9eff;
+}
+
+.floating-layer-in-a img {
+    display: block;
+    border: none;
+    float: left;
+    width: 70px;
+    height: 32px;
+}
+
+.floating-layer-on {
+    border-color: #1a9eff!important;
+}
+
+.layer-confirm {
+    line-height: 16px;
+}
+
+.layer-confirm em {
+    font-style: normal;
+    float: left;
+    line-height: 16px;
+    color: #999;
+    position: relative;
+    padding-left: 18px;
+    overflow: hidden;
+}
+
+.floating-layer-user ul li.layer-confirm em input {
+    border: none;
+    position: absolute;
+    top: 2px;
+    *top: -3px;
+    left: 0;
+    *left: -3px;
+    width: auto;
+    height: auto;
+    line-height: 16px;
+}
+
+.layer-confirm a {
+    display: inline-block;
+    float: right;
+    color: #1a9eff;
+    text-decoration: none;
+    line-height: 16px;
+}
+
+.floating-layer-button {
+    display: block;
+    width: 284px;
+    height: 38px;
+    line-height: 38px;
+    *line-height: 37px;
+    _line-height: 38px;
+    color: #fff;
+    font-size: 15px;
+    text-decoration: none;
+    text-align: center;
+    background: #1a9eff;
+    overflow: hidden;
+}
+
+.floating-layer-button:hover {
+    background: #69bfff;
+}
+
+.floating-layer-right-else {
+    width: 140px;
+    padding: 0 0 11px 30px;
+}
+
+.floating-layer-right-else span {
+    display: block;
+    margin: 0 0 0px 5px;
+    padding-bottom: 17px;
+    height: 18px;
+    line-height: 18px;
+    color: #999;
+    font-size: 13px;
+    _font-size: 12px;
+}
+
+.floating-layer-right-else a {
+    display: block;
+    width: auto;
+    padding-left: 22px;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+    margin-bottom: 12px;
+    text-align: center;
+    font-size: 12px;
+    color: #fff;
+    position: relative;
+    text-decoration: none;
+    background: #5bb4f5;
+}
+
+.floating-layer-right-else a.sina {
+    background: #e4565d;
+}
+
+.floating-layer-right-else a.qq {
+    background: #5bb4f5;
+}
+
+.floating-layer-right-else a.weichat {
+    background: #8dc91b;
+}
+
+.floating-layer-right-else a.alipay {
+    background: #79828b;
+}
+
+.floating-layer-right-else img {
+    position: absolute;
+    top: 3px;
+    left: 14px;
+    display: block;
+    width: 24px;
+    height: 24px;
+}
+
+.floating-layer-prompt {
+    width: 159px;
+    margin-left: 29px;
+    color: #333;
+    font-size: 13px;
+    _font-size: 12px;
+}
+
+.floating-layer-prompt a {
+    color: #1a9eff;
+    text-decoration: none;
+}
+
+.floating-layer-user ul li input.layer-texton {
+    width: 250px;
+    padding-left: 32px;
+    background-position: 0 -40px
+}
+
+.floating-layer-user ul li input.layer-passwordon {
+    width: 250px;
+    padding-left: 32px;
+    background-position: 0 -70px;
+}
+
+.blank30 {
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    clear: both;
+    font-size: 0;
+}
+
+.layer-confirm em a {
+    float: none;
+}
+
+.floating-layer-user ul li .floating-layer-in-a .obtain-code {
+    margin: 0;
+    color: #333;
+    font-size: 13px;
+    text-align: center;
+    display: block;
+    width: 120px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #ddd;
+    text-decoration: none;
+    background-position: 0 -110px;
+    _font-size: 12px;
+}
+
+.floating-layer-user ul li .floating-layer-in-a .obtain-code:hover {
+    color: #1a9eff;
+}
+
+.floating-layer-user ul li .floating-layer-in-a .ban-obtain {
+    color: #888!important;
+    cursor: default!important;
+    background: #d8d8d8!important;
+    border-color: #d8d8d8!important;
+}
+
+.watermark-user {
+    position: absolute;
+    left: 32px;
+    top: 1px;
+    *top: 2px;
+    _top: 3px;
+    font-size: 12px;
+    float: left;
+    width: auto;
+    height: 30px;
+    line-height: 30px;
+    *line-height: 29px;
+    _line-height: 30px;
+    color: #C9C9C9;
+    z-index: 9999;
+}
+
+.sso-web-password-center ul li .watermark-user {
+    left: 95px;
+    _top: 3px;
+}
+
+
+/*加载页*/
+
+.floating-layer-loading-title {
+    width: 543px;
+    height: 30px;
+}
+
+.floating-layer-loading {
+    width: 312px;
+    height: 132px;
+    padding-left: 96px;
+    padding-top: 50px;
+}
+
+.floating-layer-loading-ico {
+    width: 295px;
+    height: 132px;
+    float: left;
+}
+
+.floating-layer-loading-loading {
+    width: 17px;
+    float: left;
+    padding-top: 72px;
+}
+
+
+/*壁虎页*/
+
+.floating-layer-gecko {
+    width: 358px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.floating-layer-gecko-button {
+    width: 113px;
+    margin: 0 auto;
+}

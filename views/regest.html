@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>暴风VIP会员,暴风商城,暴风影音</title>
+    <link href="css/index.css" rel="stylesheet">
+    <link href="css/login.css" rel="stylesheet">
+</head>
+
+
+
+<body>
+    <div class="floating-layer-div" id="login_div">
+        <span class="blank10"></span>
+        <div class="floating-layer-title">暴风账号登录</div>
+        <div class="floating-layer-content">
+            <div class="floating-layer-left">
+                <div class="floating-layer-user">
+                    <span class="floating-layer-user-error" id="tips"></span>
+                    <ul>
+                        <li style="position:relative;"><input type="text" placeholder="手机/邮箱/用户名" name="loginname" maxlength="100" id="loginname" tabindex="1" class="layer-texton"></li>
+                        <li style="position:relative;">
+                            <input type="password" maxlength="100" name="password" placeholder="密码" id="password" tabindex="2" class="layer-passwordon" value="">
+                        </li>
+
+
+                        <li id="imgTip">
+                            <div class="floating-layer-in-a">
+                                <a href="">换一张</a>
+                                <img style="cursor:pointer;" src="https://sso.baofeng.com/new/api/get_imgcode?appid=8637&action=reg&r=0.24146399995552037" id="imgvcode" border="0"></div>
+                            <input type="text" name="mobileimgcode" id="mobileimgcode" tabindex="3" value="" maxlength="4" class="floating-layer-code">
+                        </li>
+
+                        <li>
+                            <div class="floating-layer-in-a" id="mobileback">
+                                <a class="obtain-code" href="javascript:void(0)" id="msgTip">免费获取短信</a>
+                                <a class="obtain-code ban-obtain" href="javascript:void(0)" id="tpmmsgTip" style="display:none"></a>
+                            </div>
+                            <input type="text" name="imgcode" id="imgcode" tabindex="3" value="" maxlength="6" class="floating-layer-code">
+                        </li>
+
+                        <li class="layer-confirm" style="position: absolute; left: 29px; bottom: 0px;white-space: nowrap;"><em><input type="checkbox" id="memberme" value="1" checked=""><a href="http://home.baofeng.com/user_protocol.html" target="_blank">我已阅读并同意《暴风影音注册协议》</a></em></li>
+                        <a id="submit" href="javascript:void(0);" class="sso-sub-btn">注册</a>
+                    </ul>
+                </div>
+            </div>
+            <div class="floating-layer-right">
+                <div class="floating-layer-right-else">
+                    <span>使用合作账号一键登录</span>
+                    <a href="" target="_blank" class="qq"><img src="img/qq1.png" border="0" />QQ登录</a>
+                    <a href="" target="_blank" class="weichat"><img src="img/weichat1.png" border="0" />微信登录</a>
+                    <a href="" target="_blank" class="sina"><img src="img/sina1.png" border="0" />微博登录</a>
+
+
+                </div>
+                <div class="floating-layer-prompt">还没暴风账号？<a href="">立即注册</a></div>
+                <div class="floating-layer-prompt" style="padding:20px 0 0 70px;width:89px;">
+                    <a title="点击查看帮助" style="color:#ccc;padding-left:20px;background:url(../public/image/help.png) no-repeat 0 50%" target="_blank" href="">遇到问题</a></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var submit = document.getElementById("submit");
+        var loginname = document.getElementById("loginname");
+        var password = document.getElementById("password");
+        var tips = document.getElementById("tips")
+        var msgTip = document.getElementById("msgTip");
+        var reg = /\w/;
+        var reg2 = /^\d{6}$/
+        submit.onclick = function() {
+            if (reg.test(loginname.value) && reg2.test(password.value)) {
+                alert("登陆成功")
+            } else {
+                tips.innerHTML = "输入错误,请重新输入"
+            }
+        }
+
+
+        msgTip.onclick = function() {
+            var i = 5;
+            clearInterval(timer)
+            var timer = setInterval(function() {
+
+                i--;
+
+                if (i < 0) {
+                    i = 0;
+                    clearInterval(timer)
+                    msgTip.innerHTML = "请重新获取";
+                    msgTip.disabled = false;
+
+                } else {
+                    msgTip.innerHTML = i;
+                    msgTip.disabled = true;
+                }
+            }, 1000)
+        }
+    </script>
+
+    <style>
+        .sso-sub-btn {
+            display: block;
+            width: 284px;
+            height: 38px;
+            line-height: 38px;
+            _line-height: 38px;
+            color: #fff;
+            font-size: 15px;
+            text-decoration: none;
+            text-align: center;
+            background: #1a9eff;
+            overflow: hidden;
+        }
+    </style>
+
+</body>
+
+</html>
+
+</html>
